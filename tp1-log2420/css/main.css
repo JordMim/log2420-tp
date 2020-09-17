@@ -7,8 +7,10 @@ TP1 LOG2420 v 1.0
    INDEX CSS
    ==========================================================================
    1.  Thème par défaut CSS
-   2.  Page principale
-      2.1 Section header (en-tête)
+   2.  Pages principales
+      2.1 Menu
+      2.2 Contenu du site
+   3.  Page connexion utilisateur
    ========================================================================== */
 
 
@@ -56,11 +58,11 @@ textarea {
 }
 
 /*=========================
-2.0  Page principale
+2.0  Pages principales
 ===========================*/
 
 /*=========================
-2.1  Header
+2.1  Menu (header)
 ===========================*/
 
 .header-area{
@@ -68,4 +70,46 @@ textarea {
   position: center;
   color: white;
   text-align: center;
+  padding-top: 2%;
 }
+a{
+  color: white;
+  text-decoration: none;
+}
+/*=========================
+2.2  Contenu du site (body)
+===========================*/
+body{
+  text-align: left;
+}
+body p{
+  color:black;
+  font-size: 13px;
+}
+body li{
+  color: black;
+  font-size: 13px
+}
+
+.mission{
+  padding-left: 5%;
+}
+.stats{
+  padding-left: 5%;
+}
+
+.source{
+  font-style: italic;
+  font-family: "Arial Italic";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.titre{
+  font-family: "AppleGothic";
+  font-weight: 700;
+  font-style: normal;
+  color:firebrick;
+}
+
+
