@@ -72,16 +72,24 @@ textarea {
   text-align: center;
   padding-top: 2%;
 }
-a{
+.header-area a{
   color: white;
   text-decoration: none;
 }
+
+
+.banner{
+  width: 100%;
+}
+
+
 /*=========================
 2.2  Contenu du site (body)
 ===========================*/
 body{
   text-align: left;
 }
+
 body p{
   color:black;
   font-size: 13px;
@@ -97,12 +105,32 @@ body li{
 .stats{
   padding-left: 5%;
 }
+.reglement{
+  padding-left: 5%;
+}
+.inscription{
+  padding-left: 5%;
+  position: center;
+  text-align: center;
+}
+.normal-text{
+  color: black;
+  font-size: 13px
+}
 
+.gold{
+  color:#F59A23;
+  font-size: 13px;
+}
 .source{
   font-style: italic;
   font-family: "Arial Italic";
   font-size: 12px;
   font-weight: 400;
+}
+.formulaire{
+  color:firebrick;
+  font-size: 13px;
 }
 
 .titre{

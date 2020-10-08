@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-<!--  <script src="https://kit.fontawesome.com/bd55c65e02.js" crossorigin="anonymous"></script>-->
+  <script src="https://kit.fontawesome.com/bd55c65e02.js" crossorigin="anonymous"></script>
 
   <meta name="theme-color" content="#fafafa">
 
@@ -28,20 +28,32 @@
 
 <header id="header">
   <div class="header-area">
-    <h1>Frigocommunautaire</h1>
+    <div class="banner">
+      <table width="100%">
+        <tr>
+          <td width="95%" style="font-size: 29px; font-weight: 400;">
+            Frigocommunautaire
+          </td>
+          <td width="5%">
+            <a href="#"><i class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
+          </td>
+        </tr>
+
+      </table>
+    </div>
     <table width="100%">
       <tr>
         <td>
-          <a href="mission">Mission</a>
+          <a href="#mission">Mission</a>
         </td>
         <td>
-          <a href="stats">Stats</a>
+          <a href="#stats">Stats</a>
         </td>
         <td>
-          <a href="reference">Référence</a>
+          <a href="#reg">Règlement</a>
         </td>
         <td>
-          <a href="inscription">Inscription</a>
+          <a href="#ins">Inscription</a>
         </td>
       </tr>
     </table>
@@ -74,21 +86,68 @@
       plus puissant que le gaz carbonique en potentiel de réchauffement global.</p>
 
     <div class="titre">
-    Notre mission
+      Notre mission
     </div>
     <ul>
     <li>Une communauté active pour la réduction du gaspillage alimentaire.</li>
       <li>Une mobilisation des citoyens des quartiers de Montréal via diverses activités de sensibilisation.</li>
     </ul>
   </div>
-  <div class="stats" id="#stats">
-    <div class="source">
-      <p>(Texte extrait du site Web de sauvetabouffe.org/)</p>
-    </div>
-    <br>
-    <div class="titre">
-      Le problème
-    </div>
+  <div class="stats" id="stats">
+    <p>Depuis sa création en janvier 2019...</p>
+    <span class="titre">Frigocommunautaire.com </span><span class="normal-text">a évité le gaspillage alimentaire de:</span>
+    <br><br>
+    <li>1679<br>&nbsp;&nbsp;&nbsp;+150 plats en juillet 2020</li>
+    <br><br>
+    <span class="titre">On </span><span class="normal-text">a déposé:</span>
+    <br><br>
+    <li>1678 plats<br>&nbsp;&nbsp;&nbsp;<span class="gold">BRAVO!</span>+205 plats en juillet 2020</li>
+    <br><br>
+    <span class="titre">On </span><span class="normal-text">a fournis à Ville en vert pour le compostage:</span>
+    <br><br>
+    <li>248 plats<br>&nbsp;&nbsp;&nbsp;+15 plats en juillet 2020<br>&nbsp;&nbsp;&nbsp;-2 plats comparé à juin 2020</li>
   </div>
+  <div class="reglement" id="reg">
+    <div class="titre">Fonctionnement<br>Éligibilité</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+      sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p><br>
+    <span class="titre">Opération<br>Déposer un plat</span><br>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+      luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+    <span class="titre">Prendre en plat - Mon panier</span><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+      sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
+    <span class="titre">Retour des contenants</span><br>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus
+      pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et
+      viverra justo commodo. Proin sodales pulvinar tempor.</p>
+  </div>
+  <div class="inscription" id="ins">
+    <form class="formulaire" action="index.html" id="formulaire">
+      <b>Nom complet</b> (prénom + nom de famille)<br>
+      <input type="text" name="name" id="name"><br>
+      <b>E-mail</b> (sera votre nom utilisateur)<br>
+      <input type="email" name="email" id="email"><br>
+      <b>Mot de passe</b> (mélange de lettres et chiffres)<br>
+      <input type="password" name="password" id="pass"><br>
+      <b>Mot de passe</b> (confirmation)<br>
+      <input type="password" name="conf-password" id="c-pass"><br><br>
+      <span><input type="checkbox" name="check" id="check" style="text-align: left;"></span>
+      <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
+      <input id="send" name="send" style="background-color: firebrick;
+       color: white; border: none;font-family: AppleGothic;" type="submit" value="Je confirme mon inscription">
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
