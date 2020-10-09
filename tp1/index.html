@@ -12,14 +12,26 @@
   <meta property="og:url" content="">
   <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
   <script src="https://kit.fontawesome.com/bd55c65e02.js" crossorigin="anonymous"></script>
+  <script LANGUAGE="JavaScript">
+    var active='mission';
+    function showmenu(id){
+      if (active===id){
+       return;
+      }
+      else{
+        document.getElementById(id).style.display = "block";
+        document.getElementById(active).style.display="none";
+        active=id;
+      }
+    }
+  </script>
 
   <meta name="theme-color" content="#fafafa">
 
@@ -38,22 +50,21 @@
             <a href="#"><i class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
           </td>
         </tr>
-
       </table>
     </div>
     <table width="100%">
       <tr>
-        <td>
-          <a href="#mission">Mission</a>
+        <td width="25%">
+          <a href="#mission" onclick="showmenu('mission')">Mission</a>
         </td>
-        <td>
-          <a href="#stats">Stats</a>
+        <td width="25%">
+          <a href="#stats" onclick="showmenu('stats')">Stats</a>
         </td>
-        <td>
-          <a href="#reg">Règlement</a>
+        <td width="25%">
+          <a href="#reg" onclick="showmenu('reg')">Règlement</a>
         </td>
-        <td>
-          <a href="#ins">Inscription</a>
+        <td width="25%">
+          <a href="#ins" onclick="showmenu('ins')">Inscription</a>
         </td>
       </tr>
     </table>
@@ -61,7 +72,7 @@
 
 </header>
 <body>
-  <div class="mission" id="mission">
+  <div class="mission" id="mission" style="position: absolute;">
     <div class="source">
       <p>(Texte extrait du site Web de sauvetabouffe.org/)</p>
     </div>
@@ -93,7 +104,8 @@
       <li>Une mobilisation des citoyens des quartiers de Montréal via diverses activités de sensibilisation.</li>
     </ul>
   </div>
-  <div class="stats" id="stats">
+
+  <div class="stats" id="stats" style="position: absolute;display: none">
     <p>Depuis sa création en janvier 2019...</p>
     <span class="titre">Frigocommunautaire.com </span><span class="normal-text">a évité le gaspillage alimentaire de:</span>
     <br><br>
@@ -107,7 +119,8 @@
     <br><br>
     <li>248 plats<br>&nbsp;&nbsp;&nbsp;+15 plats en juillet 2020<br>&nbsp;&nbsp;&nbsp;-2 plats comparé à juin 2020</li>
   </div>
-  <div class="reglement" id="reg">
+
+  <div class="reglement" id="reg" style="position: absolute;display: none">
     <div class="titre">Fonctionnement<br>Éligibilité</div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
       sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p><br>
@@ -123,7 +136,8 @@
       consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et
       viverra justo commodo. Proin sodales pulvinar tempor.</p>
   </div>
-  <div class="inscription" id="ins">
+
+  <div class="inscription" id="ins" style="position: absolute;display: none">
     <form class="formulaire" action="index.html" id="formulaire">
       <b>Nom complet</b> (prénom + nom de famille)<br>
       <input type="text" name="name" id="name"><br>
@@ -135,9 +149,11 @@
       <input type="password" name="conf-password" id="c-pass"><br><br>
       <span><input type="checkbox" name="check" id="check" style="text-align: left;"></span>
       <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
-      <input id="send" name="send" style="background-color: firebrick;
+      <input id="send" name="send" style="background-color: firebrick; cursor: pointer;
        color: white; border: none;font-family: AppleGothic;" type="submit" value="Je confirme mon inscription">
     </form>
+
+    <img src="icon.png" style="position: center">
   </div>
 
 

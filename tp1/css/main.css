@@ -25,15 +25,7 @@ html {
   font-family:"AppleGothic";
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
 audio,
 canvas,
@@ -76,6 +68,16 @@ textarea {
   color: white;
   text-decoration: none;
 }
+.header-area a:hover{
+  color: black;
+  text-decoration: white;
+  border: black;
+}
+.header-area a::after{
+  color: black;
+  text-decoration: white;
+  border: black;
+}
 
 
 .banner{
@@ -106,12 +108,15 @@ body li{
   padding-left: 5%;
 }
 .reglement{
+  padding-top: 2%;
   padding-left: 5%;
 }
 .inscription{
-  padding-left: 5%;
-  position: center;
+  /*padding-left: 5%;*/
+  padding-top: 10%;
+  left: 40%;
   text-align: center;
+
 }
 .normal-text{
   color: black;
