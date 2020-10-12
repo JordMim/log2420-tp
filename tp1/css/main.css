@@ -7,8 +7,10 @@ TP1 LOG2420 v 1.0
    INDEX CSS
    ==========================================================================
    1.  Thème par défaut CSS
-   2.  Page principale
-      2.1 Section header (en-tête)
+   2.  Pages principales
+      2.1 Menu
+      2.2 Contenu du site
+   3.  Page connexion utilisateur
    ========================================================================== */
 
 
@@ -23,15 +25,7 @@ html {
   font-family:"AppleGothic";
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
 
 audio,
 canvas,
@@ -56,11 +50,11 @@ textarea {
 }
 
 /*=========================
-2.0  Page principale
+2.0  Pages principales
 ===========================*/
 
 /*=========================
-2.1  Header
+2.1  Menu (header)
 ===========================*/
 
 .header-area{
@@ -68,4 +62,87 @@ textarea {
   position: center;
   color: white;
   text-align: center;
+  padding-top: 2%;
 }
+.header-area a{
+  color: white;
+  text-decoration: none;
+}
+.header-area a:hover{
+  color: black;
+  text-decoration: white;
+  border: black;
+}
+.header-area a::after{
+  color: black;
+  text-decoration: white;
+  border: black;
+}
+
+
+.banner{
+  width: 100%;
+}
+
+
+/*=========================
+2.2  Contenu du site (body)
+===========================*/
+body{
+  text-align: left;
+}
+
+body p{
+  color:black;
+  font-size: 13px;
+}
+body li{
+  color: black;
+  font-size: 13px
+}
+
+.mission{
+  padding-left: 5%;
+}
+.stats{
+  padding-left: 5%;
+}
+.reglement{
+  padding-top: 2%;
+  padding-left: 5%;
+}
+.inscription{
+  /*padding-left: 5%;*/
+  padding-top: 10%;
+  left: 40%;
+  text-align: center;
+
+}
+.normal-text{
+  color: black;
+  font-size: 13px
+}
+
+.gold{
+  color:#F59A23;
+  font-size: 13px;
+}
+.source{
+  font-style: italic;
+  font-family: "Arial Italic";
+  font-size: 12px;
+  font-weight: 400;
+}
+.formulaire{
+  color:firebrick;
+  font-size: 13px;
+}
+
+.titre{
+  font-family: "AppleGothic";
+  font-weight: 700;
+  font-style: normal;
+  color:firebrick;
+}
+
+
