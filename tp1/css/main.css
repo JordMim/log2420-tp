@@ -10,7 +10,8 @@ TP1 LOG2420 v 1.0
    2.  Pages principales
       2.1 Menu
       2.2 Contenu du site
-   3.  Page connexion utilisateur
+   3.  Pages format cellulaire landscape
+   4.  Page connexion utilisateur
    ========================================================================== */
 
 
@@ -58,22 +59,33 @@ textarea {
 ===========================*/
 
 .header-area{
-  background-color: firebrick;
+  background-color: #11A9A9;
   position: center;
   color: white;
   text-align: center;
   padding-top: 2%;
+
 }
 .header-area a{
   color: white;
   text-decoration: none;
 }
-.header-area a:hover{
-  color: black;
-  text-decoration: white;
-  border: black;
+
+.menu button{
+  color: white;
+  text-decoration: none;
+  background-color : #11A9A9;
+  border: none;
+  text-align: center;
+  font-size : 150%;
+  padding : 20px 40px 20px 40px;
 }
-.header-area a::after{
+.menu button:focus {
+  outline:0;
+  border-bottom:5px solid white;
+}
+
+.menu a:focus{
   color: black;
   text-decoration: white;
   border: black;
@@ -143,6 +155,93 @@ body li{
   font-weight: 700;
   font-style: normal;
   color:firebrick;
+}
+
+.menu a{
+  padding: 0px 30px 6px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: inline-block;
+}
+
+.banner a{
+  text-align: center;
+}
+
+.banner b{
+  padding:0px 0px 0px 25px
+}
+
+/*=========================
+3.1  Orientation landscape et ecran telephone
+===========================*/
+@media (max-width : 850px) and (orientation: landscape){
+.banner {
+  text-align: left;
+}
+
+.banner td {
+  padding : 6px 6px 6px 30px;
+}
+
+table {
+border-spacing: 8px 2px;
+}
+
+td {
+padding: 6px;
+}
+
+.menu {
+  height: 75%;
+  width: 160px;
+  z-index: 1;
+  top: 80;
+  left: 0;
+  background-color: #11A9A9;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:absolute;
+}
+
+.menu button {
+width:160px;
+  padding: 20px 0px 20px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  text-align : center;
+}
+
+.menu button:focus {
+  outline:0;
+  border-left:5px solid white;
+  border-bottom:0;
+}
+
+.mission {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+.stats {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+.reglement {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+.inscription {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
 }
 
 
