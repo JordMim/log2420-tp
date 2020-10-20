@@ -70,19 +70,25 @@ textarea {
   color: white;
   text-decoration: none;
 }
-
+.menu{
+  width: 100%;
+}
 .menu button{
   color: white;
+  width: 20%;
   text-decoration: none;
   background-color : #11A9A9;
   border: none;
   text-align: center;
-  font-size : 150%;
-  padding : 20px 40px 20px 40px;
+  padding-bottom: 2%;
+  padding-left: 2%;
 }
 .menu button:focus {
   outline:0;
   border-bottom:5px solid white;
+}
+.menu button:hover{
+  cursor: pointer;
 }
 
 .menu a:focus{
@@ -124,10 +130,11 @@ body li{
   padding-left: 5%;
 }
 .inscription{
-  /*padding-left: 5%;*/
-  padding-top: 10%;
+  padding-top: 5%;
   left: 40%;
   text-align: center;
+  position: absolute;
+  display: none
 
 }
 .normal-text{
@@ -146,7 +153,7 @@ body li{
   font-weight: 400;
 }
 .formulaire{
-  color:firebrick;
+  color:#11A9A9;
   font-size: 13px;
 }
 
@@ -154,7 +161,7 @@ body li{
   font-family: "AppleGothic";
   font-weight: 700;
   font-style: normal;
-  color:firebrick;
+  color:#11A9A9;
 }
 
 .menu a{
@@ -170,11 +177,11 @@ body li{
 }
 
 .banner b{
-  padding:0px 0px 0px 25px
+  padding:0 0 0 25px
 }
 
 /*=========================
-3.1  Orientation landscape et ecran telephone
+3.1  Orientation "landscape" et écran téléphone
 ===========================*/
 @media (max-width : 850px) and (orientation: landscape){
 .banner {
@@ -197,7 +204,7 @@ padding: 6px;
   height: 75%;
   width: 160px;
   z-index: 1;
-  top: 80;
+  top:80px;
   left: 0;
   background-color: #11A9A9;
   overflow-x: hidden;
@@ -206,15 +213,18 @@ padding: 6px;
 }
 
 .menu button {
-width:160px;
-  padding: 20px 0px 20px 0px;
+  width:160px;
+  padding: 20px 5px 20px 5px;
   text-decoration: none;
-  font-size: 25px;
   color: white;
   display: block;
   text-align : center;
 }
 
+.menu button:hover{
+  cursor: pointer;
+  border-bottom: none;
+}
 .menu button:focus {
   outline:0;
   border-left:5px solid white;
@@ -223,25 +233,26 @@ width:160px;
 
 .mission {
   margin-left: 160px;
-  font-size: 28px;
   padding: 0px 10px;
 }
 .stats {
   margin-left: 160px;
-  font-size: 28px;
   padding: 0px 10px;
 }
 .reglement {
   margin-left: 160px;
-  font-size: 28px;
   padding: 0px 10px;
 }
 .inscription {
-  margin-left: 160px;
-  font-size: 28px;
-  padding: 0px 10px;
-}
+  padding-top: 5%;
 
+}
+}
+@media (max-width: 430px) {
+  .inscription{
+    padding-top: 5%;
+    left:14%
+  }
 }
 
 
