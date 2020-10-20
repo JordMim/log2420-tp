@@ -30,10 +30,8 @@
         active=id;
       }
     }
-    function popup(){
-      if(document.getElementById("check").onselect){
-        console.log("reussi");
-      }
+    function hide(){
+      document.getElementById("page-pop").style.display="none";
     }
   </script>
 
@@ -67,7 +65,19 @@
 </header>
 
 <body>
-  <div class="mission" id="mission" style="position: absolute;">
+  <div class="page-popup" id="page-pop">
+
+    <div class="pop-up" id="pop">
+      <div class="titre-popup">
+        Bienvenue
+      </div><br>
+      Félicitations et bienvenues à Frigocommunautaires.com.<br><br>
+      Accédez à l'espace membre et dès aujourd'hui commencez à partager vos excédents de nourriture.
+      <div class="ligne" id="ligne"><br></div><br>
+      <button class="bouton-ok" id="ok" onclick="hide()">Ok</button>
+    </div>
+  </div>
+  <div class="mission" id="mission">
     <div class="source">
       <p>(Texte extrait du site Web de sauvetabouffe.org/)</p>
     </div>
@@ -100,7 +110,7 @@
     </ul>
   </div>
 
-  <div class="stats" id="stats" style="position: absolute;display: none">
+  <div class="stats" id="stats">
     <p>Depuis sa création en janvier 2019...</p>
     <span class="titre">Frigocommunautaire.com </span><span class="normal-text">a évité le gaspillage alimentaire de:</span>
     <br><br>
@@ -115,7 +125,7 @@
     <li>248 plats<br>&nbsp;&nbsp;&nbsp;+15 plats en juillet 2020<br>&nbsp;&nbsp;&nbsp;-2 plats comparé à juin 2020</li>
   </div>
 
-  <div class="reglement" id="reg" style="position: absolute;display: none">
+  <div class="reglement" id="reg">
     <div class="titre">Fonctionnement<br>Éligibilité</div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
       sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p><br>
