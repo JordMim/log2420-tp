@@ -33,6 +33,19 @@
     function hide(){
       document.getElementById("page-pop").style.display="none";
     }
+
+    var modal = document.getElementById("pop");
+    var btn = document.getElementById("send");
+    var span = document.getElementById("close")[0];
+
+    btn.onclick = function(){
+    modal.style.display = "block";
+    }
+
+    span.onclick = function(){
+    modal.style.display = "none";
+    }
+
   </script>
 
   <meta name="theme-color" content="#fafafa">
@@ -65,8 +78,7 @@
 </header>
 
 <body>
-  <div class="page-popup" id="page-pop">
-
+  <div class="modal" id="page-pop">
     <div class="pop-up" id="pop">
       <div class="titre-popup">
         Bienvenue
@@ -154,8 +166,7 @@
       <input type="password" name="conf-password" id="c-pass"><br><br>
       <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;"></span>
       <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
-      <input id="send" name="send" onclick="popup()" style="background-color:#11A9A9; cursor: pointer;
-       color: white; border: none;font-family: AppleGothic;" type="submit" value="Je confirme mon inscription">
+      <button id="send">Je confirme mon inscription</button>
     </form>
 
   </div>
