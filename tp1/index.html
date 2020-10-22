@@ -13,7 +13,6 @@
   <meta property="og:image" content="">
 
   <link rel="shortcut icon" type="image/png" href="favicon.ico">
-  <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -24,8 +23,6 @@
   <meta name="theme-color" content="#fafafa">
 
 </head>
-
-
 <header id="header">
   <div class="header-area">
     <div class="banner">
@@ -34,14 +31,14 @@
           <td width="95%" style="font-size: 25px; font-weight: 400;">
             Frigocommunautaire
           </td>
-          <td width="5%">
+          <td width="5%"style="padding-right: 1%">
             <a href="#"><i class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
           </td>
         </tr>
       </table>
     </div>
     <div class="menu">
-      <button class="#mission" id="menu_mission" onclick="showmenu('mission')">Mission</button>
+      <button class="#mission" id="menu_mission" onclick="showmenu('mission')" autofocus>Mission</button>
       <button class="#stats" onclick="showmenu('stats')">Stats</button>
       <button class="#reg" onclick="showmenu('reg')">Règlement</button>
       <button class="#ins" onclick="showmenu('ins')">Inscription</button>
@@ -50,8 +47,8 @@
 </header>
 
 <body>
-  <div class="page_pop" name="page_pop" id="page_pop">
-    <div class="pop_up" name="pop_up" id="pop_up">
+  <div class="page_pop" id="page_pop">
+    <div class="pop_up" id="pop_up">
       <div class="titre_popup">
         Bienvenue
       </div><br>
@@ -127,7 +124,7 @@
   </div>
 
   <div class="inscription" id="ins">
-    <form class="formulaire" name="formulaire" id="formulaire" onsubmit="show('page_pop')">
+    <form class="formulaire" action="javascript:void(0);" name="formulaire" id="formulaire">
 
       <label for="name"><b>Nom complet</b> (prénom + nom de famille)<br></label>
       <input type="text" name="name" id="name" required><br>
@@ -144,7 +141,8 @@
       <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;" required></span>
       <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
 
-      <button name="send" id="send" style="background-color: #11A9A9; color: black" disabled>Je confirme mon inscripton</button>
+      <button name="send" id="send" style="background-color: #11A9A9; color: black" onclick="show('page_pop')" disabled>
+        Je confirme mon inscripton</button>
 
     </form>
 

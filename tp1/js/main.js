@@ -11,7 +11,7 @@ function showmenu(id){
 
 function hide(id){
   document.getElementById(id).style.display="none";
-  window.location.href="index.html"
+  window.location.href="index.html";
 }
 
 function show(id){
