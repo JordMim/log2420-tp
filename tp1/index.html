@@ -1,17 +1,3 @@
-<!--<?php-->
-<!--//if(isset($_POST['submit'])) {-->
-<!--//  $file = "data.json";-->
-<!--//  $arr = array(-->
-<!--//    'name'     => $_POST['name'],-->
-<!--//    'email'    => $_POST['email'],-->
-<!--//    'password'    => $_POST['password'],-->
-<!--//    'confPassword' => $_POST['confPassword'],-->
-<!--//  );-->
-<!--//  $json_string = json_encode($arr);-->
-<!--//  file_put_contents($file, $json_string);-->
-<!--//  echo $json_string;-->
-<!--//}-->
-<!--//?>-->
 <!doctype html>
 <html lang="fr">
 
@@ -143,16 +129,16 @@
   <div class="inscription" id="ins">
     <form class="formulaire" name="formulaire" id="formulaire" onsubmit="show('page_pop')">
 
-      <b>Nom complet</b> (prénom + nom de famille)<br>
+      <label for="name"><b>Nom complet</b> (prénom + nom de famille)<br></label>
       <input type="text" name="name" id="name" required><br>
 
-      <b>E-mail</b> (sera votre nom utilisateur)<br>
+      <label for="email"><b>E-mail</b> (sera votre nom utilisateur)<br></label>
       <input type="email" name="email" id="email" required><br>
 
-      <b>Mot de passe</b> (mélange de lettres et chiffres)<br>
+      <label for="password"><b>Mot de passe</b> (mélange de lettres et chiffres)<br></label>
       <input type="password" name="password" id="password" required><br>
 
-      <b>Mot de passe</b> (confirmation)<br>
+      <label for="confPassword"><b>Mot de passe</b> (confirmation)<br></label>
       <input type="password" name="confPassword" id="confPassword" required onchange="check_pass()"><br><br>
 
       <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;" required></span>
@@ -163,7 +149,6 @@
     </form>
 
   </div>
-
 
 </body>
 </html>
