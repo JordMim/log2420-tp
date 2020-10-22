@@ -190,7 +190,7 @@ body li{
 /*=========================
 2.3  Modal
 ===========================*/
-.modal {
+.page_pop {
   display : none;
   position: absolute;
   z-index: 1;
@@ -203,7 +203,7 @@ body li{
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+.page_pop-content {
   background-color: white;
   margin: auto;
   padding: 20px;
@@ -289,7 +289,7 @@ padding: 6px;
 4.0 Pop-up inscription
 ===========================*/
 
-.pop-up{
+.pop_up{
   /*display: none;*/
   z-index: 2;
   margin: auto;
@@ -301,7 +301,7 @@ padding: 6px;
   text-align: center;
   color: #555555;
 }
-.titre-popup{
+.titre_popup{
   border-bottom: 1px solid #555555;
   text-align: left;
   color: #555555;
@@ -313,7 +313,7 @@ padding: 6px;
   border-bottom: 1px solid black;
 }
 
-.bouton-ok{
+.bouton_ok{
   font-size: 13px;
   width: 70px;
   height: 30px;

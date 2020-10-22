@@ -1,3 +1,17 @@
+<!--<?php-->
+<!--//if(isset($_POST['submit'])) {-->
+<!--//  $file = "data.json";-->
+<!--//  $arr = array(-->
+<!--//    'name'     => $_POST['name'],-->
+<!--//    'email'    => $_POST['email'],-->
+<!--//    'password'    => $_POST['password'],-->
+<!--//    'confPassword' => $_POST['confPassword'],-->
+<!--//  );-->
+<!--//  $json_string = json_encode($arr);-->
+<!--//  file_put_contents($file, $json_string);-->
+<!--//  echo $json_string;-->
+<!--//}-->
+<!--//?>-->
 <!doctype html>
 <html lang="fr">
 
@@ -41,7 +55,7 @@
       </table>
     </div>
     <div class="menu">
-      <button class="#mission" id="menu_mission" onclick="showmenu('mission')" autofocus>Mission</button>
+      <button class="#mission" id="menu_mission" onclick="showmenu('mission')">Mission</button>
       <button class="#stats" onclick="showmenu('stats')">Stats</button>
       <button class="#reg" onclick="showmenu('reg')">Règlement</button>
       <button class="#ins" onclick="showmenu('ins')">Inscription</button>
@@ -50,15 +64,15 @@
 </header>
 
 <body>
-  <div class="modal" name="modal" id="page_pop">
-    <div class="pop-up" name="pop_up" id="pop">
-      <div class="titre-popup">
+  <div class="page_pop" name="page_pop" id="page_pop">
+    <div class="pop_up" name="pop_up" id="pop_up">
+      <div class="titre_popup">
         Bienvenue
       </div><br>
       Félicitations et bienvenues à Frigocommunautaires.com.<br><br>
       Accédez à l'espace membre et dès aujourd'hui commencez à partager vos excédents de nourriture.
       <div class="ligne" id="ligne"><br></div><br>
-      <button class="bouton-ok" id="ok" onclick="hide('page_pop')">Ok</button>
+      <button class="bouton_ok" id="bouton_ok" onclick="hide('page_pop')">Ok</button>
     </div>
   </div>
   <div class="mission" id="mission">
@@ -127,7 +141,7 @@
   </div>
 
   <div class="inscription" id="ins">
-    <form class="formulaire" action="#ins" name="formulaire" id="formulaire" onsubmit="return validate()">
+    <form class="formulaire" name="formulaire" id="formulaire" onsubmit="show('page_pop')">
 
       <b>Nom complet</b> (prénom + nom de famille)<br>
       <input type="text" name="name" id="name" required><br>
@@ -136,17 +150,16 @@
       <input type="email" name="email" id="email" required><br>
 
       <b>Mot de passe</b> (mélange de lettres et chiffres)<br>
-      <input type="password" name="password" id="pass" required><br>
+      <input type="password" name="password" id="password" required><br>
 
       <b>Mot de passe</b> (confirmation)<br>
-      <input type="password" name="confPassword" id="c-pass" required onchange="check_pass()"><br><br>
+      <input type="password" name="confPassword" id="confPassword" required onchange="check_pass()"><br><br>
 
       <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;" required></span>
       <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
 
-      <input type="submit" id="send" name="send" value="Je confirme mon inscripton"
-             style="background-color: #11A9A9;color: black">
-<!--      <button id="send" disabled>Je confirme mon inscription</button>-->
+      <button name="send" id="send" style="background-color: #11A9A9; color: black" disabled>Je confirme mon inscripton</button>
+
     </form>
 
   </div>
