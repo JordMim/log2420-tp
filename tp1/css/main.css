@@ -240,10 +240,9 @@ body li{
 }
 
 .pop_up_membre {
-  padding : 10px 10px 10px 10px;
   background-color: white;
   margin: auto;
-  padding: 20px;
+  padding: 50px;
   border: 1px solid #888;
   width: 325px;
   height: 230px;
@@ -256,16 +255,13 @@ body li{
   position : center;
 }
 .pop_up_membre input{
-  position: fixed;
   position: sticky;
   padding :1%;
   width : 100%;
-  position : center;
   border-radius: 4px;
   border-width: 1px;
 }
 .pop_up_membre button {
-  position: fixed;
   position: sticky;
   text-align: center;
   border : none;
@@ -290,11 +286,13 @@ body li{
 .bouton_annuler:hover{
   cursor: pointer;
   color : #2112F9;
+
 }
 .bouton_connecter:hover{
   cursor: pointer;
   background-color : #12baba;
 }
+
 
 /*=========================
 3.1  Orientation "landscape" et écran téléphone
@@ -399,8 +397,9 @@ td {
 .titre_popup{
   text-align: left;
   color: #555555;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
+  font-family: "Arial Italic", serif;
 }
 
 .ligne {
