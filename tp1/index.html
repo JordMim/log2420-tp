@@ -28,11 +28,12 @@
     <div class="banner">
       <table width="100%">
         <tr>
-          <td width="95%" style="font-size: 25px; font-weight: 400;">
+          <td width="5%">
+          <td width="90%" style="font-size: 25px; font-weight: 400;">
             Frigocommunautaire
           </td>
           <td width="5%"style="padding-right: 1%">
-            <a href="#"><i class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
+            <a href="#"><i onclick="show('pop_membre')" class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
           </td>
         </tr>
       </table>
@@ -47,17 +48,36 @@
 </header>
 
 <body>
-  <div class="page_pop" id="page_pop">
+  <div class="page_pop_membre" name="pop_membre" id="pop_membre">
+    <div class="pop_up_membre" name="pop_up_membre" id="pop_up_membre">
+      <div class="titre_popup">
+        <a>Accès à l'espace membre</a>
+        <hr class="ligne">
+      </div>
+      <label for="name"><b>Nom d'utilisateur</b><br></label>
+      <input type="text" name="name_membre" id="name_membre" required><br>
+      <br>
+      <label for="password"><b>Mot de passe</b><br></label>
+      <input type="password" name="password_membre" id="password_memebre" required><br>
+      <hr class ="ligne">
+      <button class="bouton_connecter"  id="bouton_connecter" >Connecter</button>
+      <button class="bouton_annuler"  id="bouton_annuler" onclick="hide('pop_membre')">Annuler</button>
+    </div>
+  </div>
+
+<div class="page_pop" id="page_pop">
     <div class="pop_up" id="pop_up">
       <div class="titre_popup">
         Bienvenue
+        <hr class="ligne">
       </div><br>
       Félicitations et bienvenues à Frigocommunautaires.com.<br><br>
       Accédez à l'espace membre et dès aujourd'hui commencez à partager vos excédents de nourriture.
-      <div class="ligne" id="ligne"><br></div><br>
+      <div class="ligne2"><br></div><br>
       <button class="bouton_ok" id="bouton_ok" onclick="hide('page_pop')">Ok</button>
     </div>
   </div>
+
   <div class="mission" id="mission">
     <div class="source">
       <p>(Texte extrait du site Web de sauvetabouffe.org/)</p>
@@ -127,21 +147,21 @@
     <form class="formulaire" action="javascript:void(0);" name="formulaire" id="formulaire">
 
       <label for="name"><b>Nom complet</b> (prénom + nom de famille)<br></label>
-      <input type="text" name="name" id="name" required><br>
+      <input class="inputBox" type="text" name="name" id="name" required><br><br>
 
       <label for="email"><b>E-mail</b> (sera votre nom utilisateur)<br></label>
-      <input type="email" name="email" id="email" required><br>
+      <input class="inputBox" type="email" name="email" id="email" required><br><br>
 
       <label for="password"><b>Mot de passe</b> (mélange de lettres et chiffres)<br></label>
-      <input type="password" name="password" id="password" required><br>
+      <input class="inputBox" type="password" name="password" id="password" required><br><br>
 
       <label for="confPassword"><b>Mot de passe</b> (confirmation)<br></label>
-      <input type="password" name="confPassword" id="confPassword" required onchange="check_pass()"><br><br>
+      <input class="inputBox" type="password" name="confPassword" id="confPassword" required onchange="check_pass()"><br><br>
 
       <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;" required></span>
       <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
 
-      <button name="send" id="send" style="background-color: #11A9A9; color: black" onclick="show('page_pop')" disabled>
+      <button name="send" id="send" onclick="show('page_pop')" disabled>
         Je confirme mon inscripton</button>
 
     </form>
