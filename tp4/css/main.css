@@ -1,0 +1,424 @@
+/*
+TP1 LOG2420 v 1.0
+Équipe G1-3: William Ringuet, Jordan Mimeault, Émile Lefebvre et Sébastien Dagenais
+*/
+
+/*
+   INDEX CSS
+   ==========================================================================
+   1.  Thème par défaut CSS
+   2.  Pages principales
+      2.1 Menu
+      2.2 Contenu du site
+      2.3 Modal
+   3.  Pages format cellulaire landscape
+   4.  Pop-up inscription
+   ========================================================================== */
+
+
+/*=========================
+1.0  Thème par défaut CSS
+===========================*/
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family:"AppleGothic";
+}
+
+textarea {
+  resize: vertical;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/*=========================
+2.0  Pages principales
+===========================*/
+
+/*=========================
+2.1  Menu (header)
+===========================*/
+
+.header-area{
+  background-color: #11A9A9;
+  position: center;
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+
+}
+.header-area a{
+  color: white;
+  text-decoration: none;
+}
+
+.menu{
+  width: 100%;
+}
+
+.menu button{
+
+  color: white;
+  width: 23%;
+  text-decoration: none;
+  background-color : #11A9A9;
+  border: none;
+  text-align: center;
+  padding-bottom: 1%;
+  padding-left: 1%;
+}
+
+.menu button:focus {
+  outline:0;
+  border-bottom:5px solid white;
+}
+
+.menu button:hover{
+  cursor: pointer;
+}
+
+.menu a:focus{
+  color: black;
+  text-decoration: white;
+  border: black;
+}
+
+.banner{
+  width: 100%;
+}
+
+/*=========================
+2.2  Contenu du site (body)
+===========================*/
+body{
+  text-align: left;
+}
+
+body p{
+  color:black;
+  font-size: 13px;
+}
+body li{
+  color: black;
+  font-size: 13px
+}
+
+.mission{
+  padding-left: 5%;
+  position: absolute;
+}
+
+.stats{
+  padding-left: 5%;
+  position: absolute;
+  display: none
+}
+.reglement{
+  padding-top: 2%;
+  padding-left: 5%;
+  position: absolute;
+  display: none;
+}
+
+.inscription{
+  width: 30%;
+  padding-top: 5%;
+  left: 35%;
+  text-align: left;
+  position: absolute;
+  display: none;
+}
+
+.inputBox {
+  width: 98%;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+.inscription button{
+  color: white;
+  text-decoration: none;
+  background-color : #11A9A9;
+  float: right;
+  border: none;
+  border-radius: 4px;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+.inscription button:hover{
+  cursor: pointer;
+  background-color : #12baba;
+}
+
+.normal-text{
+  color: black;
+  font-size: 13px
+}
+
+.gold{
+  color:#F59A23;
+  font-size: 13px;
+}
+.source{
+  font-style: italic;
+  font-family: "Arial Italic";
+  font-size: 12px;
+  font-weight: 400;
+}
+.formulaire{
+  color:#11A9A9;
+  font-size: 13px;
+}
+
+.titre{
+  font-family: "AppleGothic";
+  font-weight: 700;
+  font-style: normal;
+  color:#11A9A9;
+}
+
+.menu a{
+  padding: 0px 30px 6px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: inline-block;
+}
+
+.banner a{
+  text-align: center;
+}
+
+.banner b{
+  padding:0 0 0 25px
+}
+/*=========================
+2.3  Modal
+===========================*/
+.page_pop {
+  display : none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 20%;
+  padding-bottom : 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.page_pop-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+.page_pop_membre {
+  position: absolute;
+  display : none;
+  z-index: 1;
+  padding-top: 10%;
+  padding-bottom : 45%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height : 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.pop_up_membre {
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 325px;
+  height: 230px;
+  left : 0px;
+  color : #9D9D9D;
+}
+.titre_popup a{
+  color : #787878;
+  font-size : 150%;
+  position : center;
+}
+.pop_up_membre input{
+  position: sticky;
+  padding :1%;
+  width : 100%;
+  border-radius: 4px;
+  border-width: 1px;
+}
+.pop_up_membre button {
+  position: sticky;
+  text-align: center;
+  border : none;
+  padding : 2% 8% 2% 8%;
+  border-radius: 6px;
+}
+
+.bouton_connecter {
+  background-color : #11A9A9;
+  color: white;
+  font-size : 130%;
+  float : right;
+}
+
+.bouton_annuler {
+  background-color : white;
+  color: #11A9A9;
+  font-size : 130%;
+  float : right;
+}
+
+.bouton_annuler:hover{
+  cursor: pointer;
+  color : #2112F9;
+
+}
+.bouton_connecter:hover{
+  cursor: pointer;
+  background-color : #12baba;
+}
+
+
+/*=========================
+3.1  Orientation "landscape" et écran téléphone
+===========================*/
+@media (max-width : 850px) and (orientation: landscape){
+.banner {
+  text-align: left;
+  left: 5%;
+}
+
+.banner td {
+  padding : 6px 6px 6px 30px;
+}
+
+table {
+  border-spacing: 8px 2px;
+}
+
+td {
+  padding: 6px;
+}
+
+.menu {
+  height: 85%;
+  width: 20%;
+  z-index: 1;
+  top:80px;
+  left: 0;
+  background-color: #11A9A9;
+  overflow-x: hidden;
+  padding-top: 20px;
+  position:absolute;
+  text-align : center;
+}
+
+.menu button {
+  width:20%;
+  padding: 20px 5px 20px 5px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  height: 25%;
+}
+
+.menu button:hover{
+  cursor: pointer;
+  border-bottom: none;
+}
+.menu button:focus {
+  outline:0;
+  border-left:5px solid white;
+  border-bottom:0;
+}
+
+.mission {
+  margin-left: 20%;
+  padding: 0px 10px;
+  align: center;
+}
+.stats {
+  margin-left: 20%;
+  padding: 0px 10px;
+  align: center;
+}
+.reglement {
+  margin-left: 20%;
+  padding: 0px 10px;
+  align: center;
+}
+.inscription {
+  padding-top: 5%;
+  padding-left: 20%;
+  left: 2%;
+  width: 78%;
+}
+}
+@media (max-width: 430px) {
+
+  .inscription {
+    padding-top: 5%;
+    padding-left: 5%;
+    left: 2%;
+    width: 78%;
+  }
+}
+/*=========================
+4.0 Pop-up inscription
+===========================*/
+
+.pop_up{
+  z-index: 2;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border-radius: 2%;
+  text-align: center;
+  color: #555555;
+}
+
+.titre_popup{
+  text-align: left;
+  color: #555555;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: "Arial Italic", serif;
+}
+
+.ligne {
+  border-bottom: 1px solid lightgrey;
+}
+
+.ligne2 {
+  border-bottom: 1px solid black;
+}
+
+.bouton_ok{
+  font-size: 13px;
+  width: 70px;
+  height: 30px;
+  margin: 0 2% 0 60%;
+  color: white;
+  background-color: #11A9A9;
+  border-color: #11A9A9;
+  border-radius: 5%;
+
+}
+

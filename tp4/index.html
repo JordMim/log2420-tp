@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Frigocommunautaire.org</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.ico">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://kit.fontawesome.com/bd55c65e02.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+<header id="header">
+  <div class="header-area">
+    <div class="banner">
+      <table width="100%">
+        <tr>
+          <td width="5%">
+          <td width="90%" style="font-size: 25px; font-weight: 400;">
+            Frigocommunautaire
+          </td>
+          <td width="5%"style="padding-right: 1%">
+            <a href="#"><i onclick="show('pop_membre')" class="fas fa-sign-out-alt" style="font-size: 40px"></i> Membres</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="menu">
+      <button class="#mission" id="menu_mission" onclick="showmenu('mission')" autofocus>Mission</button>
+      <button class="#stats" onclick="showmenu('stats')">Stats</button>
+      <button class="#reg" onclick="showmenu('reg')">Règlement</button>
+      <button class="#ins" onclick="showmenu('ins')">Inscription</button>
+    </div>
+  </div>
+</header>
+
+<body>
+  <div class="page_pop_membre" name="pop_membre" id="pop_membre">
+    <div class="pop_up_membre" name="pop_up_membre" id="pop_up_membre">
+      <div class="titre_popup">
+        <a>Accès à l'espace membre</a>
+        <hr class="ligne">
+      </div>
+      <label for="name"><b>Nom d'utilisateur</b><br></label>
+      <input type="text" name="name_membre" id="name_membre" required><br>
+      <br>
+      <label for="password"><b>Mot de passe</b><br></label>
+      <input type="password" name="password_membre" id="password_memebre" required><br><br>
+      <hr class ="ligne">
+      <button class="bouton_connecter"  id="bouton_connecter" >Connecter</button>
+      <button class="bouton_annuler"  id="bouton_annuler" onclick="hide('pop_membre')">Annuler</button>
+    </div>
+  </div>
+
+<div class="page_pop" id="page_pop">
+    <div class="pop_up" id="pop_up">
+      <div class="titre_popup">
+        Bienvenue
+        <hr class="ligne">
+      </div><br>
+      Félicitations et bienvenues à Frigocommunautaires.com.<br><br>
+      Accédez à l'espace membre et dès aujourd'hui commencez à partager vos excédents de nourriture.
+      <div class="ligne2"><br></div><br>
+      <button class="bouton_ok" id="bouton_ok" onclick="hide('page_pop')">Ok</button>
+    </div>
+  </div>
+
+  <div class="mission" id="mission">
+    <div class="source">
+      <p>(Texte extrait du site Web de sauvetabouffe.org/)</p>
+    </div>
+    <br>
+    <div class="titre">
+      Le problème
+    </div>
+    <br>
+    <p>Notre alimentation est somme toute très énergivore. Avant d’arriver à notre assiette, nos aliments ont mobilisé
+      énormément de ressources!</p>
+
+    <ul>
+      <li>Le pétrole pour les engrais utilisés en agriculture;</li>
+      <li>Le diesel pour la machinerie agricole;</li>
+      <li>L’eau pour arroser les cultures;</li>
+      <li>Le mazout ou le gaz naturels pour chauffer les bâtiments d’élevage et d’entreposage ainsi que les serres;</li>
+      <li>Le combustible des bateaux, des camions et même des avions pour transporter les aliments;</li>
+      <li>Le pétrole pour les plastiques des emballages.</li>
+    </ul>
+
+    <p>Lorsque la nourriture gaspillée se décompose dans les sites d’enfouissement, elle émet du méthane, un gaz 25 fois
+      plus puissant que le gaz carbonique en potentiel de réchauffement global.</p>
+
+    <div class="titre">
+      Notre mission
+    </div>
+    <ul>
+    <li>Une communauté active pour la réduction du gaspillage alimentaire.</li>
+      <li>Une mobilisation des citoyens des quartiers de Montréal via diverses activités de sensibilisation.</li>
+    </ul>
+  </div>
+
+  <div class="stats" id="stats">
+    <p>Depuis sa création en janvier 2019...</p>
+    <span class="titre">Frigocommunautaire.com </span><span class="normal-text">a évité le gaspillage alimentaire de:</span>
+    <br><br>
+    <li>1679<br>&nbsp;&nbsp;&nbsp;+150 plats en juillet 2020</li>
+    <br><br>
+    <span class="titre">On </span><span class="normal-text">a déposé:</span>
+    <br><br>
+    <li>1678 plats<br>&nbsp;&nbsp;&nbsp;<span class="gold">BRAVO!</span>+205 plats en juillet 2020</li>
+    <br><br>
+    <span class="titre">On </span><span class="normal-text">a fournis à Ville en vert pour le compostage:</span>
+    <br><br>
+    <li>248 plats<br>&nbsp;&nbsp;&nbsp;+15 plats en juillet 2020<br>&nbsp;&nbsp;&nbsp;-2 plats comparé à juin 2020</li>
+  </div>
+
+  <div class="reglement" id="reg">
+    <div class="titre">Fonctionnement<br>Éligibilité</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+      sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p><br>
+    <span class="titre">Opération<br>Déposer un plat</span><br>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla
+      luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+    <span class="titre">Prendre en plat - Mon panier</span><br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+      sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.</p>
+    <span class="titre">Retour des contenants</span><br>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus
+      pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et
+      viverra justo commodo. Proin sodales pulvinar tempor.</p>
+  </div>
+
+  <div class="inscription" id="ins">
+    <form class="formulaire" action="javascript:void(0);" name="formulaire" id="formulaire">
+
+      <label for="name"><b>Nom complet</b> (prénom + nom de famille)<br></label>
+      <input class="inputBox" type="text" name="name" id="name" required><br><br>
+
+      <label for="email"><b>E-mail</b> (sera votre nom utilisateur)<br></label>
+      <input class="inputBox" type="email" name="email" id="email" required><br><br>
+
+      <label for="password"><b>Mot de passe</b> (mélange de lettres et chiffres)<br></label>
+      <input class="inputBox" type="password" name="password" id="password" required><br><br>
+
+      <label for="confPassword"><b>Mot de passe</b> (confirmation)<br></label>
+      <input class="inputBox" type="password" name="confPassword" id="confPassword" required onchange="check_pass()"><br><br>
+
+      <span><input type="checkbox" name="check" id="check" style="text-align: left;border-radius: 50%;" required></span>
+      <span style="color: #888888">J'ai lu et j'accepte le règlement</span><br><br>
+
+      <button name="send" id="send" onclick="show('page_pop')" disabled>Je confirme mon inscripton</button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
