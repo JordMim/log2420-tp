@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Frigocommunautaire.org</title>
+  <link rel="shortcut icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <script src="https://kit.fontawesome.com/bd55c65e02.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<header id="header">
+  <div class="header-area">
+    <div class="banner">
+      <table width="100%">
+        <tr>
+          <td width="90%" style="font-size: 25px; font-weight: 400;">
+            Frigocommunautaire
+          </td>
+          <td width="5%"style="padding-right: 1%">
+            <a href="#"><i onclick="show('pop_log_out')" class="fas fa-sign-in-alt" style="font-size: 40px"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%">
+            <i onclick="show('page_panier')" class="fas fa-shopping-cart" style="font-size: 40px; color:white;"></i>
+          </td>
+          <td width="50%"style="text-align: center">
+            <a href="#">FRIGOS</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</header>
+
+
+<body>
+
+<div class="page_pop_log_out" name="pop_log_out" id="pop_log_out">
+  Vous voici dans le pop up de merde a la sauce
+  <div class="pop_up_membre" name="pop_up_membre" id="pop_up_membre">
+    <div class="titre_popup">
+      <a>Accès à l'espace membre</a>
+      <hr class="ligne">
+    </div>
+    <a href="index.html"><button class="bouton_confirmer"  id="bouton_confirmer" >OK</button></a>
+    <button class="bouton_annuler"  id="bouton_annuler" onclick="hide('pop_log_out')">Annuler</button>
+  </div>
+</div>
+
+</body>
+</html>

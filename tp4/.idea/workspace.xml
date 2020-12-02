@@ -10,7 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88b3bc2-12c1-497c-a1fa-5c0f91d299ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pagefrigo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../log2420-tp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +26,17 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JupyterTrust" id="34852fd2-c393-42c3-ab36-6c9864d23f82" />
   <component name="ProjectId" id="1heNbc6UY7vKzG4lpNOCyVOsf8j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,6 +44,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -57,7 +69,7 @@
       <workItem from="1600449997630" duration="54000" />
       <workItem from="1601053629643" duration="9381000" />
       <workItem from="1602624678204" duration="931000" />
-      <workItem from="1606870491957" duration="148000" />
+      <workItem from="1606870491957" duration="3240000" />
     </task>
     <servers />
   </component>
@@ -77,6 +89,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2589" y="-35" width="935" height="1032" key="dock-window-1" timestamp="1606873740875">
+      <screen x="1440" y="-58" width="1920" height="1080" />
+    </state>
+    <state x="2589" y="-35" width="935" height="1032" key="dock-window-1/0.0.1440.900/1440.-58.1920.1080@1440.-58.1920.1080" timestamp="1606873740875" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1602625487699">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
