@@ -1,6 +1,6 @@
 var active='mission';
 function showmenu(id){
-  if (active===id){
+  if (active==id){
   }
   else{
     document.getElementById(id).style.display = "block";
@@ -34,7 +34,6 @@ function check_pass() {
     document.formulaire.password.style.borderBottom="3px solid red";
     document.formulaire.confPassword.style.borderBottom="3px solid red";
   }
-
 }
 
 function sendJSon() {
@@ -68,4 +67,39 @@ function sendJSon() {
         }
       })
   });
+}
+
+function getJSON(path) {
+  return fetch(path).then(response => response.json());
+}
+
+ function checkPassword(){
+   getJSON('js/mock-db.json').then(json => {
+    let user = json.users;
+    let i = 0
+    let trouve = false
+    let email_test = toString(document.getElementById('email_membre'))
+    let password_test = toString(document.getElementById('password_membre'))
+    while(user[i] != undefined && !trouve)
+    {
+      let userEmail = toString(user[i].email)
+      if(userEmail === email_test)
+       {
+         trouve = true
+       }
+       else
+       {
+         i++
+       }
+    }
+    let userPassword = toString(user[i].password)
+    if(userPassword === password_test)
+    {
+      window.location.href = "pageFrigo.html"
+    }
+    else
+    {
+      return;
+    }
+  })
 }

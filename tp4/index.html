@@ -53,13 +53,13 @@
         <a>Accès à l'espace membre</a>
         <hr class="ligne">
       </div>
-      <label for="name"><b>Nom d'utilisateur</b><br></label>
-      <input type="text" name="name_membre" id="name_membre" required><br>
+      <label for="email_membre"><b>Nom d'utilisateur</b><br></label>
+      <input type="text" name="email_membre" id="email_membre" required><br>
       <br>
-      <label for="password"><b>Mot de passe</b><br></label>
-      <input type="password" name="password_membre" id="password_memebre" required><br><br>
+      <label for="password_membre"><b>Mot de passe</b><br></label>
+      <input type="password" name="password_membre" id="password_membre" required><br><br>
       <hr class ="ligne">
-      <button class="bouton_connecter"  id="bouton_connecter" >Connecter</button>
+      <button class="bouton_connecter"  id="bouton_connecter" onclick="checkPassword()">Connecter</button>
       <button class="bouton_annuler"  id="bouton_annuler" onclick="hide('pop_membre')">Annuler</button>
     </div>
   </div>

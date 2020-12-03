@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -10,10 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88b3bc2-12c1-497c-a1fa-5c0f91d299ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pagefrigo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../log2420-tp.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mock-db.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/mock-db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +68,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
@@ -70,6 +94,8 @@
       <workItem from="1601053629643" duration="9381000" />
       <workItem from="1602624678204" duration="931000" />
       <workItem from="1606870491957" duration="3240000" />
+      <workItem from="1607022745649" duration="2520000" />
+      <workItem from="1607025280159" duration="4475000" />
     </task>
     <servers />
   </component>
@@ -89,6 +115,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1077" y="494" key="#Web_Browsers" timestamp="1607025221118">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1077" y="494" key="#Web_Browsers/0.0.2560.1410/-1920.0.1920.1050@0.0.2560.1410" timestamp="1607025221118" />
     <state x="2589" y="-35" width="935" height="1032" key="dock-window-1" timestamp="1606873740875">
       <screen x="1440" y="-58" width="1920" height="1080" />
     </state>
