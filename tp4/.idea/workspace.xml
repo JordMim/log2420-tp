@@ -28,7 +28,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88b3bc2-12c1-497c-a1fa-5c0f91d299ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/frigo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/mock-db.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/mock-db.json" afterDir="false" />
@@ -117,7 +116,9 @@
       <workItem from="1602624678204" duration="931000" />
       <workItem from="1606870491957" duration="3402000" />
       <workItem from="1607022256960" duration="6227000" />
-      <workItem from="1607048343584" duration="13946000" />
+      <workItem from="1607048343584" duration="14050000" />
+      <workItem from="1607097797416" duration="1930000" />
+      <workItem from="1607104627917" duration="9161000" />
     </task>
     <servers />
   </component>
@@ -137,16 +138,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2342" y="-40" width="923" height="1031" key="dock-window-1" timestamp="1607029388494">
-      <screen x="1440" y="-58" width="1920" height="1080" />
+    <state x="-1760" y="0" width="1776" height="943" key="dock-window-1" timestamp="1607104702618">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2342" y="-40" width="923" height="1031" key="dock-window-1/0.0.1440.900/1440.-58.1920.1080@1440.-58.1920.1080" timestamp="1607029388494" />
+    <state x="-1760" y="0" width="1776" height="943" key="dock-window-1/0.0.2560.1410/-1920.0.1920.1050@0.0.2560.1410" timestamp="1607104702618" />
     <state x="2516" y="-35" width="828" height="1032" key="dock-window-1/0.23.1440.813/1440.-35.1920.1057@1440.-35.1920.1057" timestamp="1607022985827" />
     <state x="2795" y="-18" width="721" height="1032" key="dock-window-1/0.23.1440.815/1440.-35.1920.1057@1440.-35.1920.1057" timestamp="1607027531836" />
-    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup" timestamp="1607036842504">
+    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup" timestamp="1607104053297">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1602625487699" />
-    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup/0.0.2560.1410/-1920.0.1920.1050@0.0.2560.1410" timestamp="1607036842504" />
+    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup/0.0.2560.1410/-1920.0.1920.1050@0.0.2560.1410" timestamp="1607104053297" />
   </component>
 </project>

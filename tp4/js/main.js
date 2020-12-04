@@ -79,12 +79,11 @@ function getJSON(path) {
     let user = json.users;
     let i = 0
     let trouve = false
-    let email_test = toString(document.getElementById('email_membre'))
-    let password_test = toString(document.getElementById('password_membre'))
+    let email_test = document.getElementById('email_membre').value
+    let password_test = document.getElementById('password_membre').value
     while(user[i] != undefined && !trouve)
     {
-      let userEmail = toString(user[i].email)
-      if(userEmail === email_test)
+      if(user[i].email === email_test)
        {
          trouve = true
        }
@@ -95,63 +94,129 @@ function getJSON(path) {
     }
     if(user[i] != undefined)
     {
-      let userPassword = toString(user[i].password)
-      if(userPassword === password_test)
+      if(user[i].password === password_test)
       {
-        window.location.href = "pageFrigo.html"
+        return window.location.href = "pageFrigo.html"
       }
       else
       {
-        return;
+        return console.log("mauvais mot de passe")
       }
     }
-    return;
+    console.log("identifiant non trouve");
   })
 }
 
 window.onload = function onload(){
-  getJSON('js/mock-db.json').then(json => {
+  getJSON('js/mock-db.json').then(json =>{
     let frigos = json.frigo
-      document.getElementById('allfrigos').innerHTML =
-      `
-      ${frigos.map(frigoTemplate).join('')}
-      `
-   })
+    let i = 0
+    while(frigos[i] != undefined){
+      addFrigo(frigos[i])
+      i++
+    }
+  })
+}
+
+function addFrigo(frigo){
+  const newDiv = document.createElement("div");
+  const newBouttonNom = document.createElement("button");
+  const newPAdresse = document.createElement("p");
+  const newPDispo = document.createElement("p");
+  const newPDistance = document.createElement("p");
+  const newBool = document.createElement("p");
+
+  const nom = document.createTextNode(frigo.nom);
+  const adresse = document.createTextNode(frigo.adresse);
+  const distance = document.createTextNode(frigo.distance);
+  const dispo = document.createTextNode(frigo.disponibilite);
+  const bool = document.createTextNode("notInitialized")
+
+  newBouttonNom.appendChild(nom)
+  newPAdresse.appendChild(adresse)
+  newPDistance.appendChild(distance)
+  newPDispo.appendChild(dispo);
+  newBool.appendChild(bool)
+
+  newDiv.append(newBouttonNom)
+  newDiv.append(newPAdresse)
+  newDiv.append(newPDistance)
+  newDiv.append(newPDispo)
+  newDiv.appendChild(newBool)
+
+  newBool.style.display="none";
+
+  newDiv.id=frigo.nom
+  newBouttonNom.onclick=function func(){
+    console.log(newBool.textContent);
+    if(newBool.textContent === "notInitialized"){
+      newBool.innerText = "initialized"
+      creerRepas(frigo)
+    } else {
+      let id =
+      document.getElementById(`${frigo.nom + "repas"}`).scrollIntoView("")
+    }
+  }
+  const currentDiv = document.getElementById("allfrigos");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+
+function creerRepas(frigo){
+  bool = true
+  let i = 0
+  console.log(frigo.nom)
+  const newDiv = document.createElement("div")
+  const newRepas = document.createElement("div");
+  newDiv.id =frigo.nom + "repas";
+  const currentDiv = document.getElementById("allrepas");
+  document.body.insertBefore(newDiv, currentDiv);
+
+  newDiv.appendChild(newRepas);
+  while(frigo.repas[i] != undefined){
+    repas(frigo.repas[i], newRepas);
+    i++;
+  }
+}
+
+function repas(repas, currentDiv){
+  const newDiv = document.createElement("div");
+  const newBouttonNom = document.createElement("button");
+  const newPCategorie = document.createElement("p");
+  const newPPeremption = document.createElement("p")
+  const newImg = document.createElement("img")
+
+  const nom = document.createTextNode(repas.nom);
+  const categorie = document.createTextNode(repas.categorie);
+  const peremption = document.createTextNode(repas.peremption);
+
+  newBouttonNom.appendChild(nom)
+  newPCategorie.appendChild(categorie)
+  newPPeremption.appendChild(peremption);
+  newImg.src=repas.image;
+
+  newDiv.append(newBouttonNom)
+  newDiv.append(newPCategorie)
+  newDiv.append(newPPeremption)
+  newDiv.append(newImg)
+
+  let i = 0;
+  while(repas.allergie[i] != undefined){
+    const newPAllergie = document.createElement("p");
+    const allergie = document.createTextNode(repas.allergie[i].nom);
+    newPAllergie.appendChild(allergie);
+    newDiv.append(newPAllergie);
+    i++;
   }
 
-function repasTemplate(repas){
-    return`
-<div class="repas">
-      <img src="${repas.image}">
-      <p> ${repas.nom} </p>
-      <p> ${repas.categorie} </p>
-      <p> ${repas.nombre} </p>
-      <p> ${repas.peremption} </p>
-      <p> ${repas.categorie} </p>
-      ${repas.allergie.map(allergiesTemplate).join('')}
-</div>
-  `
+  currentDiv.appendChild(newDiv)
+  newDiv.id=repas.nom
+  newBouttonNom.onclick=function func(){
+    console.log(repas.nom)
+  }
 }
 
-function allergiesTemplate(allergie){
-  return `
-<div class="allergie">
-  <p> ${allergie.nom} </p>
-</div>
-  `
-}
 
-function frigoTemplate(frigo) {
-    return`
-    <div class="frigo">
-        <button>${frigo.nom}</button>
-        <p> ${frigo.adresse} </p>
-        <p> ${frigo.disponibilite} </p>
-        <p> ${frigo.distance} </p>
-    </div>
-    ${frigo.repas.map(repasTemplate).join('')}
-    `
-}
+
 
 
 
