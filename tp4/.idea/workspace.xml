@@ -28,11 +28,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d88b3bc2-12c1-497c-a1fa-5c0f91d299ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/frigo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../log2420-tp.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/frigo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/mock-db.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/mock-db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pagefrigo.html" beforeDir="false" afterPath="$PROJECT_DIR$/pagefrigo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,10 +69,35 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Polytechnique\session3\LOG2420\log2420-tp\tp4\js" />
+      <recent name="D:\Documents\Polytechnique\session3\LOG2420\log2420-tp\tp4" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -93,6 +117,7 @@
       <workItem from="1602624678204" duration="931000" />
       <workItem from="1606870491957" duration="3402000" />
       <workItem from="1607022256960" duration="6227000" />
+      <workItem from="1607048343584" duration="13946000" />
     </task>
     <servers />
   </component>
@@ -118,9 +143,10 @@
     <state x="2342" y="-40" width="923" height="1031" key="dock-window-1/0.0.1440.900/1440.-58.1920.1080@1440.-58.1920.1080" timestamp="1607029388494" />
     <state x="2516" y="-35" width="828" height="1032" key="dock-window-1/0.23.1440.813/1440.-35.1920.1057@1440.-35.1920.1057" timestamp="1607022985827" />
     <state x="2795" y="-18" width="721" height="1032" key="dock-window-1/0.23.1440.815/1440.-35.1920.1057@1440.-35.1920.1057" timestamp="1607027531836" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1602625487699">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup" timestamp="1607036842504">
+      <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1602625487699" />
+    <state x="684" y="307" width="1192" height="1060" key="search.everywhere.popup/0.0.2560.1410/-1920.0.1920.1050@0.0.2560.1410" timestamp="1607036842504" />
   </component>
 </project>

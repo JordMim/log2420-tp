@@ -93,14 +93,66 @@ function getJSON(path) {
          i++
        }
     }
-    let userPassword = toString(user[i].password)
-    if(userPassword === password_test)
+    if(user[i] != undefined)
     {
-      window.location.href = "pageFrigo.html"
+      let userPassword = toString(user[i].password)
+      if(userPassword === password_test)
+      {
+        window.location.href = "pageFrigo.html"
+      }
+      else
+      {
+        return;
+      }
     }
-    else
-    {
-      return;
-    }
+    return;
   })
 }
+
+window.onload = function onload(){
+  getJSON('js/mock-db.json').then(json => {
+    let frigos = json.frigo
+      document.getElementById('allfrigos').innerHTML =
+      `
+      ${frigos.map(frigoTemplate).join('')}
+      `
+   })
+  }
+
+function repasTemplate(repas){
+    return`
+<div class="repas">
+      <img src="${repas.image}">
+      <p> ${repas.nom} </p>
+      <p> ${repas.categorie} </p>
+      <p> ${repas.nombre} </p>
+      <p> ${repas.peremption} </p>
+      <p> ${repas.categorie} </p>
+      ${repas.allergie.map(allergiesTemplate).join('')}
+</div>
+  `
+}
+
+function allergiesTemplate(allergie){
+  return `
+<div class="allergie">
+  <p> ${allergie.nom} </p>
+</div>
+  `
+}
+
+function frigoTemplate(frigo) {
+    return`
+    <div class="frigo">
+        <button>${frigo.nom}</button>
+        <p> ${frigo.adresse} </p>
+        <p> ${frigo.disponibilite} </p>
+        <p> ${frigo.distance} </p>
+    </div>
+    ${frigo.repas.map(repasTemplate).join('')}
+    `
+}
+
+
+
+
