@@ -20,7 +20,7 @@
     <div class="banner">
       <table width="100%">
         <tr>
-          <td width="90%" style="font-size: 25px; font-weight: 400;">
+          <td width="100%" style="font-size: 25px; font-weight: 400;">
             Frigocommunautaire
           </td>
           <td width="5%"style="padding-right: 1%">
@@ -32,7 +32,7 @@
             <a href="#"><i onclick="show('page_panier')" class="fas fa-shopping-cart" style="font-size: 40px; color:white;"></i></a>
           </td>
           <td width="50%"style="text-align: center">
-            <a href="#">FRIGOS</a>
+            <button class="#frigos" onclick = "onload(true)" style = "margin-right : 30px">FRIGOS</button>
           </td>
         </tr>
       </table>
@@ -76,8 +76,22 @@
 
   </div>
 
-  <div id="allfrigos"></div>
+  <div class="page_frigos" name="page_frigos" id="page_frigos">
+    <div class="page_frigo" name="page_frigo" id="page_frigo">
+        <tr>
+          <script>onload(true);</script>
+        </tr>
+    </div>
+  </div>
+
   <div id="allrepas"></div>
+
+
+  <div id="allfrigos"></div>
+
+<div class="frigoall" id="frigoall">
+
+</div>
 
 </body>
 

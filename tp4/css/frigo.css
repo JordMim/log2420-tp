@@ -51,3 +51,24 @@ Ajout des nouveaux éléments de css pour la page pagefrigo.html
   left : 0px;
   color : #9D9D9D;
 }
+
+.header-area button{
+
+  color: white;
+  width: 100%;
+  height : 150%;
+
+  text-decoration: none;
+  background-color : #11A9A9;
+  border: none;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 1%;
+}
+
+.header-area button:focus {
+  outline:0;
+  border-bottom:5px solid white;
+}
+
+

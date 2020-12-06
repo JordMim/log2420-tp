@@ -29,7 +29,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d88b3bc2-12c1-497c-a1fa-5c0f91d299ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mock-db.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/mock-db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/frigo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/frigo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagefrigo.html" beforeDir="false" afterPath="$PROJECT_DIR$/pagefrigo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -107,18 +107,23 @@ function getJSON(path) {
   })
 }
 
-window.onload = function onload(){
+window.onload = function onload(x){
   getJSON('js/mock-db.json').then(json =>{
     let frigos = json.frigo
     let i = 0
+    let frigosAjout = new Array(frigos.length)
     while(frigos[i] != undefined){
-      addFrigo(frigos[i])
+      frigosAjout[i] = addFrigo(frigosAjout, frigos[i], i)
       i++
+    }
+    hideAll(frigosAjout)
+    if(x===true){
+    showAll(frigosAjout)
     }
   })
 }
 
-function addFrigo(frigo){
+function addFrigo(frigosAjout, frigo, counter){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
   const newPAdresse = document.createElement("p");
@@ -145,8 +150,13 @@ function addFrigo(frigo){
   newDiv.appendChild(newBool)
 
   newBool.style.display="none";
-
   newDiv.id=frigo.nom
+  if(counter%2 === 0){
+    changeElement(newDiv)
+    }else{
+    changeElementSecondRow(newDiv)
+    }
+  changeElementBoutton(newBouttonNom)
   newBouttonNom.onclick=function func(){
     console.log(newBool.textContent);
     if(newBool.textContent === "notInitialized"){
@@ -156,9 +166,29 @@ function addFrigo(frigo){
       let id =
       document.getElementById(`${frigo.nom + "repas"}`).scrollIntoView("")
     }
+    hideAll(frigosAjout)
   }
   const currentDiv = document.getElementById("allfrigos");
   document.body.insertBefore(newDiv, currentDiv);
+  return newDiv
+}
+
+function hideAll(frigosAjout){
+
+  let i = 0;
+  while(frigosAjout[i] != undefined){
+    frigosAjout[i].style.display = "none"
+    i++
+  }
+
+}
+
+function showAll(frigosAjout){
+  let i = 0;
+    while(frigosAjout[i] != undefined){
+      frigosAjout[i].style.display = "block"
+      i++
+    }
 }
 
 function creerRepas(frigo){
@@ -173,12 +203,12 @@ function creerRepas(frigo){
 
   newDiv.appendChild(newRepas);
   while(frigo.repas[i] != undefined){
-    repas(frigo.repas[i], newRepas);
+    repas(frigo.repas[i], newRepas, i);
     i++;
   }
 }
 
-function repas(repas, currentDiv){
+function repas(repas, currentDiv, counter){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
   const newPCategorie = document.createElement("p");
@@ -199,6 +229,14 @@ function repas(repas, currentDiv){
   newDiv.append(newPPeremption)
   newDiv.append(newImg)
 
+  changeElementImage(newImg)
+  changeElementBoutton(newBouttonNom)
+
+  if(counter%2 === 0){
+    changeElementRepas(newDiv)
+  }else{
+    changeElementRepasSecondRow(newDiv)
+  }
   let i = 0;
   while(repas.allergie[i] != undefined){
     const newPAllergie = document.createElement("p");
@@ -212,11 +250,71 @@ function repas(repas, currentDiv){
   newDiv.id=repas.nom
   newBouttonNom.onclick=function func(){
     console.log(repas.nom)
+    addElement(repas.nom)
   }
 }
 
+function addElement(repas){
+  document.getElementById(repas).style.display = "block"
+}
 
 
+function changeElement(id){
+  id.style.padding = "50px 0px 0px 0px";
+  id.style.position = "relative";
+  id.style.left = "20%";
+  id.style.fontSize = "125%";
+  id.style.font = "italic bold 20px arial,serif";
+}
+
+function changeElementSecondRow(id){
+  id.style.padding = "0px 0px 0px 0px";
+  id.style.position = "relative";
+  id.style.left = "65%";
+  id.style.fontSize = "125%";
+  id.style.font = "italic bold 20px arial,serif";
+}
+
+function changeElementBoutton(id){
+  id.style.backgroundColor = "#11A9A9";
+  id.style.borderRadius = "11px";
+  id.style.color = "white";
+  id.style.border = "none";
+  id.style.width = "200px";
+  id.style.height = "100px";
+  id.style.fontSize = "125%";
+}
+
+function changeElementRepas(id){
+  id.style.padding = "50px 0px 0px 0px";
+  id.style.position = "relative";
+  id.style.left = "10%";
+  id.style.fontSize = "125%";
+  id.style.font = "italic bold 20px arial,serif";
+  id.style.boxSizing = "border-box";
+  id.style.border = "6px solid black"
+  id.style.padding = "50px"
+  id.style.margin = "20px"
+  id.style.width = "425px"
+}
+
+function changeElementRepasSecondRow(id){
+  id.style.padding = "0px 0px 0px 0px";
+  id.style.position = "relative";
+  id.style.left = "60%";
+  id.style.fontSize = "125%";
+  id.style.font = "italic bold 20px arial,serif";
+  id.style.boxSizing = "border-box";
+  id.style.width = "425px"
+  id.style.border = "6px solid black"
+  id.style.padding = "50px"
+  id.style.margin = "20px"
+}
+
+function changeElementImage(id){
+  id.style.height = "150px"
+  id.style.width = "300px"
+}
 
 
 
