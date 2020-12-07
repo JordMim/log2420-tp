@@ -81,7 +81,7 @@ function getJSON(path) {
     let trouve = false
     let email_test = document.getElementById('email_membre').value
     let password_test = document.getElementById('password_membre').value
-    while(user[i] != undefined && !trouve)
+    while(user[i] !== undefined && !trouve)
     {
       if(user[i].email === email_test)
        {
@@ -92,7 +92,7 @@ function getJSON(path) {
          i++
        }
     }
-    if(user[i] != undefined)
+    if(user[i] !== undefined)
     {
       if(user[i].password === password_test)
       {
@@ -100,10 +100,14 @@ function getJSON(path) {
       }
       else
       {
-        return console.log("mauvais mot de passe")
+        document.getElementById('email_membre').style.borderBottom="3px solid red";
+        document.getElementById('password_membre').style.borderBottom="3px solid red";
+        return alert("mauvais mot de passe")
       }
     }
-    console.log("identifiant non trouve");
+    document.getElementById('email_membre').style.borderBottom="3px solid red";
+    document.getElementById('password_membre').style.borderBottom="3px solid red";
+    alert("nom d'utiisateur non trouve");
   })
 }
 
@@ -202,7 +206,7 @@ function creerRepas(frigo){
   document.body.insertBefore(newDiv, currentDiv);
 
   newDiv.appendChild(newRepas);
-  while(frigo.repas[i] != undefined){
+  while(frigo.repas[i] !== undefined){
     repas(frigo.repas[i], newRepas, i);
     i++;
   }
@@ -212,33 +216,34 @@ function repas(repas, currentDiv, counter){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
   const newPCategorie = document.createElement("p");
-  const newPPeremption = document.createElement("p")
-  const newImg = document.createElement("img")
+  const newPPeremption = document.createElement("p");
+  const newImg = document.createElement("img");
+
 
   const nom = document.createTextNode(repas.nom);
   const categorie = document.createTextNode(repas.categorie);
   const peremption = document.createTextNode(repas.peremption);
 
-  newBouttonNom.appendChild(nom)
-  newPCategorie.appendChild(categorie)
+  newBouttonNom.appendChild(nom);
+  newPCategorie.appendChild(categorie);
   newPPeremption.appendChild(peremption);
   newImg.src=repas.image;
 
-  newDiv.append(newBouttonNom)
-  newDiv.append(newPCategorie)
-  newDiv.append(newPPeremption)
-  newDiv.append(newImg)
+  newDiv.append(newBouttonNom);
+  newDiv.append(newPCategorie);
+  newDiv.append(newPPeremption);
+  newDiv.append(newImg);
 
-  changeElementImage(newImg)
-  changeElementBoutton(newBouttonNom)
+  changeElementImage(newImg);
+  changeElementBoutton(newBouttonNom);
 
   if(counter%2 === 0){
-    changeElementRepas(newDiv)
+    changeElementRepas(newDiv);
   }else{
-    changeElementRepasSecondRow(newDiv)
+    changeElementRepasSecondRow(newDiv);
   }
   let i = 0;
-  while(repas.allergie[i] != undefined){
+  while(repas.allergie[i] !== undefined){
     const newPAllergie = document.createElement("p");
     const allergie = document.createTextNode(repas.allergie[i].nom);
     newPAllergie.appendChild(allergie);
@@ -246,18 +251,33 @@ function repas(repas, currentDiv, counter){
     i++;
   }
 
-  currentDiv.appendChild(newDiv)
-  newDiv.id=repas.nom
+  currentDiv.appendChild(newDiv);
+  newDiv.id=repas.nom;
+  const newRepasPanier = document.createElement("div");
+  newRepasPanier.id="idRepas";
+  const newBouttonNomPanier = document.createElement("button");
+  const nomBouton = document.createTextNode("Retirer");
+  newBouttonNomPanier.style.color="Red";
+  newBouttonNomPanier.appendChild(nomBouton);
+  newRepasPanier.append(repas.nom);
+  newRepasPanier.append(newBouttonNomPanier);
   newBouttonNom.onclick=function func(){
-    console.log(repas.nom)
-    addElement(repas.nom)
+    console.log(repas.nom);
+    document.getElementById('element_panier').append(newRepasPanier);
+    addElementRepas(repas.nom)
+  }
+  newBouttonNomPanier.onclick=function func(){
+    removeElementRepas(repas.nom);
   }
 }
 
-function addElement(repas){
-  document.getElementById(repas).style.display = "block"
+function addElementRepas(repas){
+  document.getElementById(repas).style.border = "6px solid red";
 }
-
+function removeElementRepas(repas){
+  document.getElementById(repas).style.border="4px solid black";
+  document.getElementById("idRepas").remove();
+}
 
 function changeElement(id){
   id.style.padding = "50px 0px 0px 0px";
@@ -292,7 +312,7 @@ function changeElementRepas(id){
   id.style.fontSize = "125%";
   id.style.font = "italic bold 20px arial,serif";
   id.style.boxSizing = "border-box";
-  id.style.border = "6px solid black"
+  id.style.border = "4px solid black"
   id.style.padding = "50px"
   id.style.margin = "20px"
   id.style.width = "425px"
@@ -306,7 +326,7 @@ function changeElementRepasSecondRow(id){
   id.style.font = "italic bold 20px arial,serif";
   id.style.boxSizing = "border-box";
   id.style.width = "425px"
-  id.style.border = "6px solid black"
+  id.style.border = "4px solid black"
   id.style.padding = "50px"
   id.style.margin = "20px"
 }
