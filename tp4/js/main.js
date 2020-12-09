@@ -117,7 +117,7 @@ window.onload = function onload(x){
     let i = 0
     let frigosAjout = new Array(frigos.length)
     while(frigos[i] != undefined){
-      frigosAjout[i] = addFrigo(frigosAjout, frigos[i], i)
+      frigosAjout[i] = addFrigo(frigosAjout, frigos[i])
       i++
     }
     hideAll(frigosAjout)
@@ -127,7 +127,7 @@ window.onload = function onload(x){
   })
 }
 
-function addFrigo(frigosAjout, frigo, counter){
+function addFrigo(frigosAjout, frigo){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
   const newPAdresse = document.createElement("p");
@@ -155,12 +155,7 @@ function addFrigo(frigosAjout, frigo, counter){
 
   newBool.style.display="none";
   newDiv.id=frigo.nom
-  if(counter%2 === 0){
-    changeElement(newDiv)
-    }else{
-    changeElementSecondRow(newDiv)
-    }
-  changeElementBoutton(newBouttonNom)
+  newBouttonNom.className = "boutton"
   newBouttonNom.onclick=function func(){
     console.log(newBool.textContent);
     if(newBool.textContent === "notInitialized"){
@@ -172,8 +167,9 @@ function addFrigo(frigosAjout, frigo, counter){
     }
     hideAll(frigosAjout)
   }
-  const currentDiv = document.getElementById("allfrigos");
-  document.body.insertBefore(newDiv, currentDiv);
+  newDiv.className = "page_frigo"
+  const currentDiv = document.getElementById("page_frigo");
+  currentDiv.append(newDiv)
   return newDiv
 }
 
@@ -206,23 +202,24 @@ function creerRepas(frigo){
   document.body.insertBefore(newDiv, currentDiv);
 
   newDiv.appendChild(newRepas);
+  newDiv.className = "page_repas"
   while(frigo.repas[i] !== undefined){
     repas(frigo.repas[i], newRepas, i);
     i++;
   }
 }
 
-function repas(repas, currentDiv, counter){
+function repas(repas, currentDiv){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
   const newPCategorie = document.createElement("p");
   const newPPeremption = document.createElement("p");
   const newImg = document.createElement("img");
-
+  const newAllergies = document.createElement("p")
 
   const nom = document.createTextNode(repas.nom);
-  const categorie = document.createTextNode(repas.categorie);
-  const peremption = document.createTextNode(repas.peremption);
+  const categorie = document.createTextNode("Categorie : " + repas.categorie);
+  const peremption = document.createTextNode("Date de peremption : " + repas.peremption);
 
   newBouttonNom.appendChild(nom);
   newPCategorie.appendChild(categorie);
@@ -234,24 +231,21 @@ function repas(repas, currentDiv, counter){
   newDiv.append(newPPeremption);
   newDiv.append(newImg);
 
-  changeElementImage(newImg);
-  changeElementBoutton(newBouttonNom);
+  newImg.className = "image"
+  newBouttonNom.className = "boutton"
 
-  if(counter%2 === 0){
-    changeElementRepas(newDiv);
-  }else{
-    changeElementRepasSecondRow(newDiv);
-  }
   let i = 0;
+  newAllergies.append("Allergie(s) : ")
   while(repas.allergie[i] !== undefined){
     const newPAllergie = document.createElement("p");
     const allergie = document.createTextNode(repas.allergie[i].nom);
     newPAllergie.appendChild(allergie);
-    newDiv.append(newPAllergie);
+    newAllergies.append(newPAllergie);
     i++;
   }
-
-  currentDiv.appendChild(newDiv);
+  newDiv.append(newAllergies)
+  newDiv.className = "page_repas"
+  currentDiv.append(newDiv);
   newDiv.id=repas.nom;
   const newRepasPanier = document.createElement("div");
   newRepasPanier.id="idRepas";
@@ -274,67 +268,12 @@ function repas(repas, currentDiv, counter){
 function addElementRepas(repas){
   document.getElementById(repas).style.border = "6px solid red";
 }
+
 function removeElementRepas(repas){
   document.getElementById(repas).style.border="4px solid black";
   document.getElementById("idRepas").remove();
 }
 
-function changeElement(id){
-  id.style.padding = "50px 0px 0px 0px";
-  id.style.position = "relative";
-  id.style.left = "20%";
-  id.style.fontSize = "125%";
-  id.style.font = "italic bold 20px arial,serif";
-}
-
-function changeElementSecondRow(id){
-  id.style.padding = "0px 0px 0px 0px";
-  id.style.position = "relative";
-  id.style.left = "65%";
-  id.style.fontSize = "125%";
-  id.style.font = "italic bold 20px arial,serif";
-}
-
-function changeElementBoutton(id){
-  id.style.backgroundColor = "#11A9A9";
-  id.style.borderRadius = "11px";
-  id.style.color = "white";
-  id.style.border = "none";
-  id.style.width = "200px";
-  id.style.height = "100px";
-  id.style.fontSize = "125%";
-}
-
-function changeElementRepas(id){
-  id.style.padding = "50px 0px 0px 0px";
-  id.style.position = "relative";
-  id.style.left = "10%";
-  id.style.fontSize = "125%";
-  id.style.font = "italic bold 20px arial,serif";
-  id.style.boxSizing = "border-box";
-  id.style.border = "4px solid black"
-  id.style.padding = "50px"
-  id.style.margin = "20px"
-  id.style.width = "425px"
-}
-
-function changeElementRepasSecondRow(id){
-  id.style.padding = "0px 0px 0px 0px";
-  id.style.position = "relative";
-  id.style.left = "60%";
-  id.style.fontSize = "125%";
-  id.style.font = "italic bold 20px arial,serif";
-  id.style.boxSizing = "border-box";
-  id.style.width = "425px"
-  id.style.border = "4px solid black"
-  id.style.padding = "50px"
-  id.style.margin = "20px"
-}
-
-function changeElementImage(id){
-  id.style.height = "150px"
-  id.style.width = "300px"
-}
 
 
 
