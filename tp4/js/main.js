@@ -116,7 +116,7 @@ window.onload = function onload(x){
     let frigos = json.frigo
     let i = 0
     let frigosAjout = new Array(frigos.length)
-    while(frigos[i] != undefined){
+    while(frigos[i] !== undefined){
       frigosAjout[i] = addFrigo(frigosAjout, frigos[i])
       i++
     }
@@ -185,7 +185,7 @@ function hideAll(frigosAjout){
 
 function showAll(frigosAjout){
   let i = 0;
-    while(frigosAjout[i] != undefined){
+    while(frigosAjout[i] !== undefined){
       frigosAjout[i].style.display = "block"
       i++
     }
@@ -208,7 +208,6 @@ function creerRepas(frigo){
     i++;
   }
 }
-
 function repas(repas, currentDiv){
   const newDiv = document.createElement("div");
   const newBouttonNom = document.createElement("button");
@@ -247,31 +246,37 @@ function repas(repas, currentDiv){
   newDiv.className = "page_repas"
   currentDiv.append(newDiv);
   newDiv.id=repas.nom;
+  document.getElementById(repas.nom).style.border="4px solid black"
   const newRepasPanier = document.createElement("div");
-  newRepasPanier.id="idRepas";
+
+  newRepasPanier.id=repas.nom+"_panier";
   const newBouttonNomPanier = document.createElement("button");
   const nomBouton = document.createTextNode("Retirer");
-  newBouttonNomPanier.style.color="Red";
+  newBouttonNomPanier.style.color="red";
+  newBouttonNomPanier.style.border="solid red";
   newBouttonNomPanier.appendChild(nomBouton);
+  newBouttonNomPanier.style.textAlign="right";
   newRepasPanier.append(repas.nom);
   newRepasPanier.append(newBouttonNomPanier);
+
   newBouttonNom.onclick=function func(){
     console.log(repas.nom);
     document.getElementById('element_panier').append(newRepasPanier);
     addElementRepas(repas.nom)
   }
+
   newBouttonNomPanier.onclick=function func(){
     removeElementRepas(repas.nom);
   }
 }
 
 function addElementRepas(repas){
-  document.getElementById(repas).style.border = "6px solid red";
+  document.getElementById(repas).style.border = "13px solid green";
 }
 
-function removeElementRepas(repas){
-  document.getElementById(repas).style.border="4px solid black";
-  document.getElementById("idRepas").remove();
+function removeElementRepas(repas_panier){
+  document.getElementById(repas_panier).style.border="4px solid black";
+  document.getElementById(repas_panier+"_panier").remove();
 }
 
 
